@@ -1,34 +1,12 @@
 package br.com.myproject.hospital.model;
 
-import java.util.Scanner;
 
 public class Cliente extends Pessoa {
-	//Nome, idade.
-	private String endereco;
-	private String email;
-	Consulta consulta = new Consulta();
-	
-	//metodos Get e Set;
-	public String getEndereco() {
-		return endereco;
-	}
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	
-	
 
-	
-	
-	
-	
-	
-	// 
+	public Cliente(String cpf, String nome, String email, String endereco,
+			long telefone) {
+		super(cpf, nome, email, endereco, telefone);
+		// TODO Auto-generated constructor stub
+	}
+		
 }

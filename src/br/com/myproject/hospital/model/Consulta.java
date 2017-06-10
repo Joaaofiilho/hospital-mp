@@ -1,75 +1,69 @@
 package br.com.myproject.hospital.model;
 
 public class Consulta {
-	private String data, especialidade;
-	private int hora, minuto;
-	private boolean marcada;
-	private long protocolo;
-	
-	
-	
-	//Construtor
-	public Consulta(){
-		this.data = "01/01/01";
-		this.hora = 0;
-		this.minuto = 0;
-		this.marcada = false;
-		this.especialidade = "indefinida";
+	protected String data;
+	protected String hora;
+	protected String medico;
+	protected String especialidade;
+	protected boolean confirmada;
+	protected boolean reagendada;
+
+	public Consulta(String data, String hora, String medico,
+			String especialidade) {
+		this.data = data;
+		this.hora = hora;
+		this.medico = medico;
+		this.especialidade = especialidade;
+		confirmada = false;
+		reagendada = false;
 	}
 
-	
-	//Métodos Setters e Getters
-	
-	
 	public String getData() {
 		return data;
 	}
-
-	public long getProtocolo() {
-		return protocolo;
-	}
-
-
-	public void setProtocolo(long protocolo) {
-		this.protocolo = protocolo;
-	}
-
-
-	public String getEspecialidade() {
-		return especialidade;
-	}
-
-
-	public void setEspecialidade(String especialidade) {
-		this.especialidade = especialidade;
-	}
-
 
 	public void setData(String data) {
 		this.data = data;
 	}
 
-	public int getHora() {
+	public String getHora() {
 		return hora;
 	}
 
-	public void setHora(int hora) {
+	public void setHora(String hora) {
 		this.hora = hora;
 	}
 
-	public int getMinuto() {
-		return minuto;
+	public String getMedico() {
+		return medico;
 	}
 
-	public void setMinuto(int minuto) {
-		this.minuto = minuto;
+	public void setMedico(String medico) {
+		this.medico = medico;
 	}
 
-	public boolean isMarcada() {
-		return marcada;
+	public String getEspecialidade() {
+		return especialidade;
 	}
 
-	public void setMarcada(boolean marcada) {
-		this.marcada = marcada;
+	public void setEspecialidade(String especialidade) {
+		this.especialidade = especialidade;
 	}
+
+	public boolean isConfirmada() {
+		return confirmada;
+	}
+
+	public void setConfirmada(boolean confirmada) {
+		this.confirmada = confirmada;
+	}
+
+	public boolean isReagendada() {
+		return reagendada;
+	}
+
+	public void setReagendada(boolean reagendada) {
+		this.reagendada = reagendada;
+	}
+
 }
